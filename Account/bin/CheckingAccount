@@ -1,0 +1,8 @@
+public class CheckingAccount extends Account {
+    public CheckingAccount() {
+        int d = 0;
+    };
+    double Depositl() {
+        return d + newasdf;
+    }
+}
