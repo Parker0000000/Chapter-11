@@ -1,7 +1,7 @@
 import java.util.Date;
 import java.time.LocalDate;
 
-public class Account {
+public class CheckingAccount extends Account{
     private int ID;
     private double balance;
     private double annualinterestrate;
@@ -22,7 +22,7 @@ public class Account {
     
 
 
-    Account() {
+    CheckingAccount() {
         ID = 0;
         balance =0;
         annualinterestrate = 0;
@@ -30,7 +30,7 @@ public class Account {
         
     }
 
-    Account(int newID, double newbalance, double newintrest, double withdraw, double deposit, double newdate, int jh) {
+    CheckingAccount(int newID, double newbalance, double newintrest, double withdraw, double deposit, double newdate, int jh) {
         this.ID = newID;
         this.newamount = 0;
         this.balance = newbalance;
@@ -49,26 +49,35 @@ public class Account {
         
         
     }
-    double normal() {
-        return Deposit();
+    double normal1() {
+        return Deposit1();
     }
 
-    int ID() {
+    String notice1() {
+        return "you are overdrafted and have a limit of 100";
+    }
+
+    int ID1() {
         return ID;
     }
-    double getmonthlyintrestrate() {
+    double getmonthlyintrestrate1() {
         return (annualinterestrate / 100); 
     }
-    double monthlyintrest() {
-        return balance * (days * getmonthlyintrestrate());
+    double monthlyintrest1() {
+        return balance * (days * getmonthlyintrestrate1());
     }
-    double Withdraw() {
-        return d - newamount;
+    double Withdraw1() {
+        if (newasdf - d != -100) {
+            return d - newamount;
+        } else {
+            return -101;
+        }
+        
     }
-    double Deposit() {
+    double Deposit1() {
         return d + newasdf;
     }
-    String datecreated() {
+    String datecreated1() {
         return day + "/" + month + "/" + year;
     }
 }
